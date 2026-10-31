@@ -10,8 +10,8 @@
     3. Lien du menu actif selon la section visible
     4. Accueil : braises animées (canvas) + titre mot par mot
     5. Parallaxe du logo en filigrane
-    6. Apparitions au défilement (fondu, glissement, cascade)
-    7. Bandeau défilant des savoir-faire
+    6. Apparitions au défilement, dans les deux sens (descente ET remontée)
+    7. Bandeau défilant des savoir-faire (+ 2e bandeau en sens contraire)
     8. Cartes inclinées en 3D avec reflet lumineux
     9. Boutons magnétiques + onde au clic
    10. Méthodologie : compteurs et ligne de progression
@@ -36,7 +36,9 @@
     titreAnime:       true,
     parallaxe:        true,
     apparitions:      true,
+    apparitionsAller_Retour: true,  // les blocs disparaissent en sortant et réapparaissent dans les DEUX sens
     bandeau:          true,
+    bandeauDouble:    true,   // 2e bandeau qui défile dans le sens contraire
     cartes3D:         true,
     boutonsMagnetiques: true,
     methodologie:     true,
@@ -97,6 +99,8 @@
   .fx-reveal.fx-droite{transform:translateX(50px)}
   .fx-reveal.fx-zoom{transform:scale(.9)}
   .fx-reveal.fx-vu{opacity:1;transform:none}
+  /* Quand on remonte, le bloc arrive par le haut (sens contraire) */
+  .fx-reveal.fx-par-haut:not(.fx-vu):not(.fx-zoom){transform:translateY(-40px)}
   .surtitre.fx-trait{position:relative;display:inline-block;padding-bottom:6px}
   .surtitre.fx-trait::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:100%;border-radius:3px;background:currentColor;
     transform:scaleX(0);transform-origin:0 50%;transition:transform 1s cubic-bezier(.2,.8,.2,1) .3s}
@@ -112,6 +116,9 @@
     padding:0 22px;white-space:nowrap;display:flex;align-items:center;gap:22px}
   .fx-bandeau span::after{content:"";width:9px;height:9px;background:${C.volt};transform:rotate(45deg);display:inline-block}
   @keyframes fx-marquee{to{transform:translateX(-50%)}}
+  .fx-bandeau.fx-inverse{background:${C.volt};color:${C.navy};transform:rotate(1.2deg);margin-top:-4px}
+  .fx-bandeau.fx-inverse span::after{background:${C.flame}}
+  .fx-bandeau.fx-inverse .fx-bandeau-piste{animation-direction:reverse}
 
   /* 8. Cartes 3D */
   .fx-tilt{transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s ease;position:relative}
@@ -384,6 +391,11 @@
     const cadre = document.createElement('div');
     cadre.className = 'fx-bandeau-cadre';
     cadre.appendChild(bandeau);
+    if (REGLAGES.bandeauDouble) {
+      const inverse = bandeau.cloneNode(true);
+      inverse.classList.add('fx-inverse');
+      cadre.appendChild(inverse);
+    }
     hero.after(cadre);
   }
 
@@ -406,7 +418,16 @@
     const deja = new Set();
     const observateur = new IntersectionObserver(entrees => {
       entrees.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('fx-vu'); observateur.unobserve(e.target); }
+        const el = e.target;
+        if (e.isIntersecting) {
+          el.classList.add('fx-vu');
+          if (!REGLAGES.apparitionsAller_Retour) observateur.unobserve(el);
+        } else if (REGLAGES.apparitionsAller_Retour) {
+          // Le bloc sort de l'écran : on le cache, et on retient de quel côté il est parti.
+          // Sorti par le haut (on descend) → il reviendra par le haut quand on remontera.
+          el.classList.toggle('fx-par-haut', e.boundingClientRect.top < 0);
+          el.classList.remove('fx-vu');
+        }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
@@ -487,17 +508,31 @@
       ligne.innerHTML = '<b></b>';
       liste.prepend(ligne);
 
+      const minuteurs = [];
       new IntersectionObserver(([e], obs) => {
-        if (!e.isIntersecting) return;
-        obs.disconnect();
+        if (!e.isIntersecting) {
+          // En sortant : on remet à zéro pour rejouer l'animation au retour (dans les deux sens)
+          if (REGLAGES.apparitionsAller_Retour) {
+            ligne.classList.remove('fx-vu');
+            minuteurs.splice(0).forEach(id => { clearTimeout(id); clearInterval(id); });
+            etapes.forEach(li => {
+              const num = $('span', li);
+              if (num && num.dataset.cible) num.textContent = num.dataset.cible;
+              li.classList.remove('fx-etape-active');
+            });
+          }
+          return;
+        }
+        if (!REGLAGES.apparitionsAller_Retour) obs.disconnect();
         ligne.classList.add('fx-vu');
         etapes.forEach((li, i) => {
           const num = $('span', li);
           if (!num) return;
-          const cible = parseInt(num.textContent, 10);
+          if (!num.dataset.cible) num.dataset.cible = num.textContent.trim();
+          const cible = parseInt(num.dataset.cible, 10);
           if (moinsAnimations || isNaN(cible)) return;
           // Chaque numéro compte de 00 à sa valeur, l'un après l'autre
-          setTimeout(() => {
+          minuteurs.push(setTimeout(() => {
             li.classList.add('fx-etape-active');
             let n = 0;
             const t = setInterval(() => {
@@ -505,8 +540,9 @@
               num.textContent = String(n).padStart(2, '0');
               if (n >= cible) { clearInterval(t); setTimeout(() => li.classList.remove('fx-etape-active'), 600); }
             }, 90);
+            minuteurs.push(t);
             num.textContent = '00';
-          }, i * 420);
+          }, i * 420));
         });
       }, { threshold: 0.4 }).observe(liste);
     }
