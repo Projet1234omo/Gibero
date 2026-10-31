@@ -1,0 +1,26 @@
+/* =====================================================================
+   RÉGLAGES PERSONNELS — GUIBERO Consulting
+   Ce fichier est chargé après style.css : ce que vous écrivez ici
+   l'emporte sur les styles du site. Modifiez les valeurs, enregistrez,
+   puis rechargez la page dans le navigateur (F5).
+   ===================================================================== */
+
+
+/* ---------------------------------------------------------------------
+   PETITS TITRES ORANGE / JAUNES AU-DESSUS DES SECTIONS
+   « Qui sommes-nous », « Nos domaines et services », « Notre méthodologie »,
+   « Références et interventions », « Le fondateur », « Contactez-nous »
+   --------------------------------------------------------------------- */
+.surtitre {
+  font-size: 25px;          /* taille : 12px = taille d'origine, essayez 14px, 18px, 20px… */
+  font-weight: 700;         /* épaisseur : 400 normal · 500 · 600 · 700 gras */
+  letter-spacing: 0.10em;   /* espacement des lettres : 0 = serré, 0.2em = très espacé */
+
+}
+
+/* Taille différente sur téléphone (facultatif) */
+@media (max-width: 767px) {
+  .surtitre {
+    font-size: 14px;
+  }
+}

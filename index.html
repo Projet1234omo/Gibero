@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GUIBERO Consulting | Sécurité incendie, sécurité électrique et sûreté à Abidjan</title>
+  <meta name="description" content="GUIBERO Consulting, cabinet spécialisé en sécurité incendie, sécurité électrique et sûreté à Abidjan : audit / notice de sécurité, conseil, formation, installation et maintenance, dans le respect des normes." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/logo-guibero-nav.png" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Réglages personnels (tailles, polices…) : modifier perso.css -->
+  <link rel="stylesheet" href="perso.css" />
+</head>
+<body class="bg-white text-slate-700 antialiased">
+
+  <!-- NAVIGATION -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-navy-900/95 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#accueil" class="flex items-center" aria-label="GUIBERO Consulting – retour à l'accueil">
+        <img src="assets/logo-guibero-nav.png" alt="GUIBERO Consulting" width="214" height="40" class="h-9 md:h-10 w-auto" />
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm text-slate-200">
+        <a href="#apropos" class="hover:text-volt-400 transition">À propos</a>
+        <a href="#services" class="hover:text-volt-400 transition">Services</a>
+        <a href="#methodologie" class="hover:text-volt-400 transition">Méthodologie</a>
+        <a href="#references" class="hover:text-volt-400 transition">Références</a>
+        <a href="#contact" class="bg-flame-500 hover:bg-flame-600 text-white px-4 py-2 rounded-md font-semibold transition">Contact</a>
+      </nav>
+
+      <button id="menu-btn" class="md:hidden text-white p-2" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-navy-800 border-t border-white/10">
+      <div class="px-5 py-4 flex flex-col gap-4 text-slate-100">
+        <a href="#apropos" class="mobile-link">À propos</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#methodologie" class="mobile-link">Méthodologie</a>
+        <a href="#references" class="mobile-link">Références</a>
+        <a href="#contact" class="mobile-link text-volt-400 font-semibold">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ACCUEIL -->
+    <section id="accueil" class="hero-bg filigrane filigrane-sombre pt-32 pb-24 md:pt-44 md:pb-32 text-white">
+      <div class="max-w-6xl mx-auto px-5">
+        <p class="text-volt-400 font-semibold tracking-widest text-xs md:text-sm uppercase mb-5">Sécurité incendie · Sécurité électrique · Sécurité Sûreté</p>
+        <h1 class="font-display font-extrabold text-5xl md:text-7xl leading-[1.05] max-w-3xl">
+          La qualité au service de votre sécurité, dans le respect des normes.
+        </h1>
+        <p class="mt-6 text-lg text-slate-300 max-w-2xl">
+          GUIBERO Consulting accompagne les entreprises et institutions dans la maîtrise des risques : audit / notice de sécurité et mise en sécurité, conseil, formation, installation et mise en conformité pour protéger les biens et les personnes.
+        </p>
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="#contact" class="bg-flame-500 hover:bg-flame-600 px-6 py-3 rounded-md font-semibold transition">Demander un audit ou une notice de sécurité</a>
+          <a href="#services" class="border border-white/30 hover:bg-white/10 px-6 py-3 rounded-md font-semibold transition">Découvrir nos services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSTAT -->
+    <section class="bg-navy-800 text-white py-14 filigrane filigrane-sombre filigrane-centre">
+      <div class="max-w-4xl mx-auto px-5 text-center">
+        <p class="text-lg md:text-xl text-slate-200 leading-relaxed">
+          Le manque de formation et d'information sur les risques d'incendie et les risques électriques est à l'origine de nombreux sinistres. La majorité de ces incidents pourrait être évitée grâce à des mesures de prévention adaptées.
+        </p>
+        <p class="mt-4 font-display text-2xl md:text-3xl text-volt-400 font-bold">Cette responsabilité commence par vous…</p>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section id="apropos" class="py-20 md:py-28 filigrane">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <p class="surtitre text-flame-500 uppercase mb-3">Qui sommes-nous</p>
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-navy-900 leading-tight">Un cabinet spécialisé en sécurité incendie, sécurité électrique et sûreté</h2>
+            <p class="mt-5 leading-relaxed">
+              GUIBERO Consulting propose des solutions globales alliant audit / notice de sécurité, conseil et mise en conformité, afin de garantir la protection des biens et des personnes en Côte d'Ivoire et au-delà.
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <div class="bg-navy-900 text-slate-300 rounded-xl p-6 border-l-4 border-flame-500">
+              <h3 class="font-display text-2xl font-bold text-white">Notre mission</h3>
+              <p class="mt-1">Garantir un environnement sécurisé et conforme, avec des solutions fiables, durables et adaptées aux besoins spécifiques de chaque client.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valeurs -->
+        <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="bg-navy-900 text-slate-300 rounded-xl p-6">
+            <h3 class="font-display text-xl font-bold text-white">Exigence professionnelle</h3>
+            <p class="mt-2 text-sm">Une approche rigoureuse et structurée.</p>
+          </div>
+          <div class="bg-navy-900 text-slate-300 rounded-xl p-6">
+            <h3 class="font-display text-xl font-bold text-white">Réactivité opérationnelle</h3>
+            <p class="mt-2 text-sm">Une capacité d'intervention rapide.</p>
+          </div>
+          <div class="bg-navy-900 text-slate-300 rounded-xl p-6">
+            <h3 class="font-display text-xl font-bold text-white">Fiabilité</h3>
+            <p class="mt-2 text-sm">Des solutions durables et éprouvées.</p>
+          </div>
+          <div class="bg-navy-900 text-slate-300 rounded-xl p-6">
+            <h3 class="font-display text-xl font-bold text-white">Conformité</h3>
+            <p class="mt-2 text-sm">Un respect strict des normes et des réglementations en vigueur.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- SERVICES : 3 domaines (boutons) × prestations -->
+    <section id="services" class="bg-slate-50 py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-5">
+        <p class="surtitre text-flame-500 uppercase mb-3">Nos domaines et services</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-navy-900">Ce que nous faisons pour vous</h2>
+        <p class="mt-4 max-w-3xl">Trois domaines d'expertise, déclinés en installation, formation et maintenance.</p>
+
+        <!-- Boutons des domaines -->
+        <p class="mt-10 mb-3 text-sm font-semibold text-navy-900 flex items-center gap-2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11V5a2 2 0 114 0v5m0-1a2 2 0 114 0v2m0-1a2 2 0 114 0v4a7 7 0 01-7 7h-1.5a6 6 0 01-5-2.7L4 13.5a1.8 1.8 0 013-2L9 13"/></svg>
+          Cliquez sur un domaine pour découvrir nos prestations
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4" role="tablist" aria-label="Nos domaines">
+          <button type="button" class="theme-incendie tab-btn" role="tab" id="tab-incendie" aria-controls="domaine-incendie" aria-selected="true">
+            <span class="tab-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c1.5 3.2 5 5.2 5 10a5 5 0 11-10 0c0-1.9.9-3.4 1.9-4.6.4 1.7 1.4 2.6 2.4 2.6C11 7.6 11 4.6 12 2z"/></svg></span>
+            <span class="tab-title">Sécurité incendie</span>
+            <span class="tab-cta" aria-hidden="true">›</span>
+          </button>
+          <button type="button" class="theme-electrique tab-btn" role="tab" id="tab-electrique" aria-controls="domaine-electrique" aria-selected="false" tabindex="-1">
+            <span class="tab-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+            <span class="tab-title">Sécurité électrique</span>
+            <span class="tab-cta" aria-hidden="true">›</span>
+          </button>
+          <button type="button" class="theme-surete tab-btn" role="tab" id="tab-surete" aria-controls="domaine-surete" aria-selected="false" tabindex="-1">
+            <span class="tab-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3zm0 6a2.5 2.5 0 00-2.5 2.5V12H9v5h6v-5h-.5v-1.5A2.5 2.5 0 0012 8zm0 1.5a1 1 0 011 1V12h-2v-1.5a1 1 0 011-1z"/></svg></span>
+            <span class="tab-title">Sécurité sûreté</span>
+            <span class="tab-cta" aria-hidden="true">›</span>
+          </button>
+        </div>
+
+        <!-- ============ SÉCURITÉ INCENDIE ============ -->
+        <div class="theme-incendie tab-panel" role="tabpanel" id="domaine-incendie" aria-labelledby="tab-incendie">
+
+          <h3 class="presta"><span class="presta-num">01</span>Installation</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <article class="svc-card">
+              <img src="assets/service-detecteur.jpg" alt="Détecteur automatique d'incendie en alarme" class="w-full h-52 object-cover" loading="lazy" />
+              <div class="p-6">
+                <h4 class="card-title">Système de Sécurité Incendie (SSI)</h4>
+                <div class="mt-4 grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <p class="sub-title">Détection <span class="abbr">SDI</span></p>
+                    <ul class="items">
+                      <li>Centrale ECS</li>
+                      <li>Détecteurs automatiques (DAI)</li>
+                      <li>Déclencheurs manuels (DM)</li>
+                      <li>Indicateurs d'action (IA)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="sub-title">Mise en sécurité <span class="abbr">SMSI</span></p>
+                    <ul class="items">
+                      <li>Centralisateur CMSI</li>
+                      <li>Compartimentage coupe-feu (REI)</li>
+                      <li>Désenfumage</li>
+                      <li>Évacuation</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="svc-card">
+              <div class="grid grid-cols-2 gap-1">
+                <img src="assets/service-sprinkler.jpg" alt="Tête de sprinkler en fonctionnement" class="w-full h-52 object-cover" loading="lazy" />
+                <img src="assets/service-ria.jpg" alt="Robinet d'incendie armé et extincteur" class="w-full h-52 object-cover" loading="lazy" />
+              </div>
+              <div class="p-6">
+                <h4 class="card-title">Moyens d'extinction</h4>
+                <ul class="items mt-4">
+                  <li>Extincteurs : eau, eau + additif (A3F), poudre, CO<sub>2</sub></li>
+                  <li>Robinets d'incendie armés (RIA)</li>
+                  <li>Réseaux sprinkler</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="mt-10 grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="presta"><span class="presta-num">02</span>Formation</h3>
+              <article class="svc-card p-6">
+                <ul class="items">
+                  <li>SSIAP 1, 2 et 3 — Service de Sécurité Incendie et d'Assistance à Personnes</li>
+                  <li>SST — Sauveteur Secouriste du Travail</li>
+                  <li>Exploitation du SSI</li>
+                  <li>Agent de Sécurité Incendie</li>
+                </ul>
+              </article>
+            </div>
+            <div>
+              <h3 class="presta"><span class="presta-num">03</span>Maintenance</h3>
+              <article class="svc-card p-6">
+                <ul class="items">
+                  <li>Maintenance préventive</li>
+                  <li>Maintenance corrective</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div class="normes">
+            <span class="normes-title">Normes et réglementation</span>
+            <span class="chip">NF S 61 (SSI)</span>
+            <span class="chip">NF EN 54</span>
+            <span class="chip">Règles APSAD</span>
+            <span class="chip">Réglementation ivoirienne</span>
+          </div>
+        </div>
+
+        <!-- ============ SÉCURITÉ ÉLECTRIQUE ============ -->
+        <div class="theme-electrique tab-panel" role="tabpanel" id="domaine-electrique" aria-labelledby="tab-electrique">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="presta"><span class="presta-num">01</span>Formation</h3>
+              <article class="svc-card">
+                <div class="grid grid-cols-2 gap-1">
+                  <img src="assets/ref-habilitation-br-1.jpg" alt="Stagiaires d'une formation à l'habilitation électrique" class="w-full h-52 object-cover" loading="lazy" />
+                  <img src="assets/ref-habilitation-br-2.jpg" alt="Formation à l'habilitation électrique en salle" class="w-full h-52 object-cover" loading="lazy" />
+                </div>
+                <div class="p-6">
+                <h4 class="card-title">Habilitations électriques</h4>
+                <div class="chips mt-3">
+                  <span class="hab-code">B0</span><span class="hab-code">B1</span><span class="hab-code">B2</span><span class="hab-code">BS</span><span class="hab-code">BC</span><span class="hab-code">BR</span><span class="hab-code">BE</span>
+                </div>
+                <h4 class="card-title mt-6">Installations électriques</h4>
+                <p class="mt-1 text-sm">Conception et réalisation conformes à la norme NF C 15-100.</p>
+                </div>
+              </article>
+            </div>
+            <div>
+              <h3 class="presta"><span class="presta-num">02</span>Audit / Notice de sécurité</h3>
+              <article class="svc-card p-6">
+                <ul class="items">
+                  <li>Audit / notice de sécurité des installations électriques</li>
+                  <li>Prévention des risques électriques</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div class="normes">
+            <span class="normes-title">Normes et réglementation</span>
+            <span class="chip">NF C 18-510</span>
+            <span class="chip">NF C 15-100</span>
+            <span class="chip">Réglementation ivoirienne</span>
+          </div>
+        </div>
+
+        <!-- ============ SÉCURITÉ SÛRETÉ ============ -->
+        <div class="theme-surete tab-panel" role="tabpanel" id="domaine-surete" aria-labelledby="tab-surete">
+
+          <h3 class="presta"><span class="presta-num">01</span>Installation</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <article class="svc-card p-6">
+              <h4 class="card-title">Anti-intrusion</h4>
+              <ul class="items mt-4">
+                <li>Détecteurs périmétriques, périphériques et volumétriques</li>
+                <li>Centrale anti-intrusion</li>
+                <li>Diffuseurs sonores</li>
+              </ul>
+            </article>
+            <article class="svc-card p-6">
+              <h4 class="card-title">Contrôle d'accès</h4>
+              <ul class="items mt-4">
+                <li>Badges, lecteurs et biométrie</li>
+                <li>Gâches et ventouses électromagnétiques</li>
+                <li>Tourniquets et barrières</li>
+                <li>Logiciel de gestion des accès</li>
+              </ul>
+            </article>
+            <article class="svc-card p-6">
+              <h4 class="card-title">Vidéosurveillance</h4>
+              <ul class="items mt-4">
+                <li>Caméras dôme, bullet et PTZ</li>
+                <li>Enregistreurs DVR / NVR</li>
+                <li>Consultation à distance</li>
+                <li>De l'étude à la mise en service</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="mt-10 grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="presta"><span class="presta-num">02</span>Formation</h3>
+              <article class="svc-card p-6">
+                <ul class="items">
+                  <li>Anti-intrusion </li>
+                  <li>contrôle d'accès</li>
+                  <li>vidéosurveillance</li>
+                  <li>Agent de Sécurité (Palpation de sécurité, filtrage, surveillance et environnement juridique) </li>
+                  <li>Normes et réglementation en vigueur</li>
+                </ul>
+              </article>
+            </div>
+            <div>
+              <h3 class="presta"><span class="presta-num">03</span>Suivi et maintenance</h3>
+              <article class="svc-card p-6">
+                <ul class="items">
+                  <li>Maintenance préventive</li>
+                  <li>Maintenance corrective</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div class="normes">
+            <span class="normes-title">Normes et réglementation</span>
+            <span class="chip">Règles APSAD</span>
+            <span class="chip">NF EN 50131</span>
+            <span class="chip">NF EN 62676</span>
+            <span class="chip">Réglementation ivoirienne (ARTCI)</span>
+          </div>
+        </div>
+
+        <!-- Pourquoi nous choisir -->
+        <div class="mt-16">
+          <h3 class="font-display text-3xl font-bold text-navy-900">Pourquoi nous choisir</h3>
+          <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div class="bg-navy-900 text-white rounded-xl p-5 text-center font-medium">Équipe qualifiée et expérimentée</div>
+            <div class="bg-navy-900 text-white rounded-xl p-5 text-center font-medium">Respect des normes en vigueur</div>
+            <div class="bg-navy-900 text-white rounded-xl p-5 text-center font-medium">Réactivité</div>
+            <div class="bg-navy-900 text-white rounded-xl p-5 text-center font-medium">Solutions adaptées à chaque client</div>
+            <div class="bg-navy-900 text-white rounded-xl p-5 text-center font-medium">Accompagnement personnalisé</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÉTHODOLOGIE -->
+    <section id="methodologie" class="py-20 md:py-28 filigrane">
+      <div class="max-w-6xl mx-auto px-5">
+        <p class="surtitre text-flame-500 uppercase mb-3">Notre méthodologie</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-navy-900">Une démarche en 5 étapes</h2>
+
+        <ol class="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <li class="relative bg-navy-900 text-slate-300 rounded-xl p-6">
+            <span class="font-display text-5xl font-extrabold text-flame-500">01</span>
+            <h3 class="mt-1 font-display text-xl font-bold text-white">Audit / notice de sécurité du site, conseil, POI</h3>
+          </li>
+          <li class="relative bg-navy-900 text-slate-300 rounded-xl p-6">
+            <span class="font-display text-5xl font-extrabold text-flame-500">02</span>
+            <h3 class="mt-1 font-display text-xl font-bold text-white">Analyse des risques et besoins de sécurité <span class="block text-sm font-sans font-normal text-slate-400 mt-1">(rapport d'audit ou de notice de sécurité)</span></h3>
+          </li>
+          <li class="relative bg-navy-900 text-slate-300 rounded-xl p-6">
+            <span class="font-display text-5xl font-extrabold text-flame-500">03</span>
+            <h3 class="mt-1 font-display text-xl font-bold text-white">Prescription des mesures de sécurité <span class="block text-sm font-sans font-normal text-slate-400 mt-1">selon les normes et réglementations en vigueur</span></h3>
+          </li>
+          <li class="relative bg-navy-900 text-slate-300 rounded-xl p-6">
+            <span class="font-display text-5xl font-extrabold text-flame-500">04</span>
+            <h3 class="mt-1 font-display text-xl font-bold text-white">Installation / Intervention</h3>
+          </li>
+          <li class="relative bg-navy-900 text-slate-300 rounded-xl p-6">
+            <span class="font-display text-5xl font-extrabold text-flame-500">05</span>
+            <h3 class="mt-1 font-display text-xl font-bold text-white">Suivi et maintenance</h3>
+          </li>
+        </ol>
+
+        <!-- Cibles -->
+        <div class="mt-16">
+          <h3 class="font-display text-3xl font-bold text-navy-900">Nos cibles</h3>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="px-4 py-2 rounded-full bg-navy-900 text-white text-sm">Établissements recevant du public (ERP)</span>
+            <span class="px-4 py-2 rounded-full bg-navy-900 text-white text-sm">Immeubles de grande hauteur (IGH)</span>
+            <span class="px-4 py-2 rounded-full bg-navy-900 text-white text-sm">Immeubles de très grande hauteur (ITGH)</span>
+            <span class="px-4 py-2 rounded-full bg-navy-900 text-white text-sm">Sites industriels et sensibles</span>
+            <span class="px-4 py-2 rounded-full bg-navy-900 text-white text-sm">Installations électriques (basse tension)</span>
+            <span class="px-4 py-2 rounded-full bg-navy-900 text-white text-sm">Bâtiments tertiaires et administratifs</span>
+            <span class="px-4 py-2 rounded-full bg-navy-900 text-white text-sm">Sites miniers et zones à risques spécifiques</span>
+            <span class="px-4 py-2 rounded-full bg-navy-900 text-white text-sm">Centres spéciaux</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RÉFÉRENCES -->
+    <section id="references" class="bg-navy-900 text-white py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-5">
+        <p class="surtitre text-volt-400 uppercase mb-3">Références et interventions</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold">Des missions réalisées en Afrique et en Europe</h2>
+
+        <div class="mt-12 flex flex-wrap justify-center gap-5">
+
+          <!-- Référence mise en avant -->
+          <article class="ref-card w-full md:grid md:grid-cols-2 md:items-center">
+            <img src="assets/ref-bceao-ssi.jpg" alt="Formation des sapeurs-pompiers au système de sécurité incendie à la BCEAO" class="w-full h-auto" loading="lazy" />
+            <div class="p-6 md:p-10">
+              <span class="ref-pays">Côte d'Ivoire</span>
+              <p class="mt-2 text-lg md:text-xl">Formation des sapeurs-pompiers (GSPM &amp; ONPC) à l'exploitation du système de sécurité incendie (SSI) à la BCEAO, Plateau.</p>
+            </div>
+          </article>
+
+          <article class="ref-card ref-col">
+            <img src="assets/ref-croix-rouge.jpg" alt="Formation sur les systèmes de sécurité incendie organisée par la Croix-Rouge" class="ref-img" loading="lazy" />
+            <div class="p-6">
+              <span class="ref-pays">Côte d'Ivoire</span>
+              <p class="mt-2">Formation sur le fonctionnement des systèmes de sécurité incendie organisée par la Croix-Rouge à Abidjan.</p>
+            </div>
+          </article>
+
+          <article class="ref-card ref-col">
+            <img src="assets/ref-mine-mandiana.jpg" alt="Audit de sécurité et sûreté à la mine de Mandiana" class="ref-img" loading="lazy" />
+            <div class="p-6">
+              <span class="ref-pays">Guinée Conakry</span>
+              <p class="mt-2">Audit de sécurité et sûreté à la mine de Mandiana (Nord Guinée).</p>
+            </div>
+          </article>
+
+          <article class="ref-card ref-col">
+            <img src="assets/ref-cave-canem.jpg" alt="Formation des agents de sécurité de CAVE CANEM à l'utilisation des extincteurs" class="ref-img" loading="lazy" />
+            <div class="p-6">
+              <span class="ref-pays">Guinée Conakry</span>
+              <p class="mt-2">Formation des agents de sécurité de la société CAVE CANEM sur l'utilisation des extincteurs, mine de Forekariah.</p>
+            </div>
+          </article>
+
+          <article class="ref-card ref-col">
+            <div class="grid grid-cols-2 gap-1">
+              <img src="assets/ref-habilitation-br-1.jpg" alt="Formation à l'habilitation électrique BR" class="ref-img" loading="lazy" />
+              <img src="assets/ref-habilitation-br-2.jpg" alt="Formation à l'habilitation électrique BR en salle" class="ref-img" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <span class="ref-pays">France</span>
+              <p class="mt-2">Formation à l'habilitation électrique BR (NF C 18-510) de techniciens électriciens (pose de compteurs Linky), Livry-Gargan.</p>
+            </div>
+          </article>
+
+          <article class="ref-card ref-col">
+            <div class="grid grid-cols-2 gap-1">
+              <img src="assets/ref-cachan-1.jpg" alt="Vérification du câblage d'un volet de désenfumage" class="ref-img" loading="lazy" />
+              <img src="assets/ref-cachan-2.jpg" alt="Vérification du module déporté de désenfumage" class="ref-img" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <span class="ref-pays">France</span>
+              <p class="mt-2">Vérification des câbles du volet d'extraction et du module déporté de la fonction désenfumage d'un système de sécurité incendie à l'hôpital d'Accueil Cachan, avant raccordement.</p>
+            </div>
+          </article>
+
+          <article class="ref-card ref-col">
+            <img src="assets/ref-clamart-porte-coupe-feu.jpg" alt="Équipement d'une porte coupe-feu à la clinique de Clamart" class="ref-img" loading="lazy" />
+            <div class="p-6">
+              <span class="ref-pays">France</span>
+              <p class="mt-2">Équipement d'une porte coupe-feu suite à une extension de locaux à la clinique de Clamart.</p>
+            </div>
+          </article>
+
+          <article class="ref-card ref-col">
+            <img src="assets/ref-habilitation-gestionnaires.jpg" alt="Formation à l'habilitation électrique de responsables de gestion d'établissement" class="ref-img" loading="lazy" />
+            <div class="p-6">
+              <span class="ref-pays">France</span>
+              <p class="mt-2">Formation en habilitation électrique pour des responsables de gestion d'établissement à Livry-Gargan.</p>
+            </div>
+          </article>
+
+          <article class="ref-card ref-col">
+           <img src="assets/ref-ssiap-bspp.jpg" alt="Fin d'examen SSIAP en présence d'un officier de la BSPP" class="ref-img" loading="lazy" />
+           <div class="p-6">
+              <span class="ref-pays">France</span>
+               <p class="mt-2 leading-relaxed">
+                 Fin d'examen SSIAP en présence d'un officier de la Brigade des
+             <span class="whitespace-nowrap">Sapeurs-Pompiers</span> de Paris (BSPP) à
+            <span class="whitespace-nowrap">Noisy-Le Grand</span>.
+           </p>
+          </div>
+        </article>
+
+        </div>
+
+        <!-- Fondateur -->
+        <div class="mt-20 grid md:grid-cols-3 gap-10 items-start">
+          <div class="md:col-span-1">
+            <div class="aspect-square rounded-2xl overflow-hidden bg-navy-700">
+               <img
+                    src="assets/fondateur.jpg"
+                     alt="Fondateur de GUIBERO Consulting"
+                      class="w-full h-full object-cover object-top"
+                 >
+              </div>
+            </div>
+          <div class="md:col-span-2">
+            <p class="surtitre text-volt-400 uppercase mb-3">Le fondateur</p>
+            <h3 class="font-display text-4xl font-bold">M. Yves Honoré Guibero</h3>
+            <p class="mt-1 text-slate-300">Professionnel de la sécurité des biens et des personnes, spécialisé en systèmes de sécurité incendie, sécurité électrique et sûreté.</p>
+            <p class="mt-5 text-slate-300 leading-relaxed">
+              Formé en France, où il a également débuté sa carrière, il a acquis des compétences solides et une maîtrise rigoureuse des normes internationales en matière de sécurité. Il a ensuite exercé dans plusieurs pays africains, notamment au Mali, en Guinée et en Côte d'Ivoire, développant une expertise adaptée aux réalités africaines.
+            </p>
+            <p class="mt-4 text-slate-300 leading-relaxed">
+              Fondateur du cabinet GUIBERO Consulting, il met aujourd'hui son expertise au service des organisations en Côte d'Ivoire, avec une approche basée sur la rigueur, la réactivité et la performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 md:py-28 filigrane filigrane-gauche">
+      <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12">
+        <div>
+          <p class="surtitre text-flame-500 uppercase mb-3">Contactez-nous</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold text-navy-900">Parlons de votre sécurité</h2>
+          <p class="mt-4">Un audit ou une notice de sécurité, une formation, une installation ? Écrivez-nous ou appelez-nous, nous vous répondons rapidement.</p>
+
+          <ul class="mt-8 space-y-5">
+            <li>
+              <span class="block text-xs uppercase tracking-wider text-slate-500">Téléphone</span>
+              <a href="tel:+2250749857915" class="block text-lg font-semibold text-navy-900 hover:text-flame-500">+225 07 48 62 91 88</a>
+              <a href="tel:+2252731948195" class="block text-lg font-semibold text-navy-900 hover:text-flame-500">+225 27 31 94 81 95</a>
+            </li>
+            <li>
+              <span class="block text-xs uppercase tracking-wider text-slate-500">E-mail</span>
+              <a href="mailto:guiberoconsulting.securite@gmail.com" class="text-lg font-semibold text-navy-900 hover:text-flame-500 break-all">guiberoconsulting.securite@gmail.com</a>
+            </li>
+            <li>
+              <span class="block text-xs uppercase tracking-wider text-slate-500">Adresse</span>
+              <span class="text-lg font-semibold text-navy-900">Cocody Angré 8<sup>ème</sup> Tranche, Cité Wedouwel villa 248, Abidjan, Côte d'Ivoire</span>
+            </li>
+          </ul>
+
+          <a href="https://wa.me/2250748629188" target="_blank" rel="noopener"
+             class="mt-8 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold transition">
+            Écrire sur WhatsApp
+          </a>
+        </div>
+
+        <div>
+          <!-- Message après l'envoi (succès ou erreur), affiché par script.js -->
+          <div id="form-statut" class="hidden mb-4 rounded-lg border px-4 py-3 font-medium" aria-live="polite"></div>
+
+          <!-- Formulaire de contact : les messages sont envoyés par Formspree
+               vers l'adresse e-mail du compte Formspree de GUIBERO Consulting.
+               Pour changer de formulaire Formspree, remplacer l'adresse dans action="…". -->
+          <form id="contact-form" action="https://formspree.io/f/xgaaykvq" method="POST" class="bg-navy-900 rounded-2xl p-7 space-y-4" novalidate>
+
+            <!-- Objet de l'e-mail reçu (complété automatiquement avec le besoin choisi) -->
+            <input type="hidden" name="subject" value="Nouvelle demande – GUIBERO Consulting" />
+
+            <!-- Piège anti-robot : champ invisible, ne pas remplir -->
+            <div aria-hidden="true" class="piege-robot">
+              <label for="site_web">Ne pas remplir ce champ</label>
+              <input id="site_web" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div>
+              <label for="nom" class="block text-sm font-medium text-white mb-1">Nom complet</label>
+              <input id="nom" name="Nom" type="text" required maxlength="100" autocomplete="name" placeholder="Votre nom complet" class="w-full rounded-md border border-slate-300 px-3 py-2.5 text-navy-900 focus:outline-none focus:ring-2 focus:ring-flame-500" />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-white mb-1">E-mail</label>
+              <input id="email" name="email" type="email" required maxlength="150" autocomplete="email" placeholder="exemple@gmail.com" class="w-full rounded-md border border-slate-300 px-3 py-2.5 text-navy-900 focus:outline-none focus:ring-2 focus:ring-flame-500" />
+            </div>
+
+            <div>
+              <label for="telephone" class="block text-sm font-medium text-white mb-1">Numéro de téléphone / WhatsApp <span class="font-normal text-slate-400">(facultatif)</span></label>
+              <input id="telephone" name="Téléphone" type="tel" maxlength="30" autocomplete="tel" placeholder="+225 07 XX XX XX XX" class="w-full rounded-md border border-slate-300 px-3 py-2.5 text-navy-900 focus:outline-none focus:ring-2 focus:ring-flame-500" />
+              <p class="mt-1 text-xs text-slate-400">Hors de Côte d'Ivoire, indiquez l'indicatif de votre pays (ex. : +33 pour la France).</p>
+            </div>
+
+            <div>
+              <label for="sujet" class="block text-sm font-medium text-white mb-1">Votre besoin</label>
+              <select id="sujet" name="Besoin" class="w-full rounded-md border border-slate-300 px-3 py-2.5 bg-white text-navy-900 focus:outline-none focus:ring-2 focus:ring-flame-500">
+                <option>Formation</option>
+                <option>Audit/notice de sécurité et conseil</option>
+                <option>Installation</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-white mb-1">Message</label>
+              <textarea id="message" name="Message" rows="4" required maxlength="3000" placeholder="Décrivez votre besoin..." class="w-full rounded-md border border-slate-300 px-3 py-2.5 text-navy-900 focus:outline-none focus:ring-2 focus:ring-flame-500"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-flame-500 hover:bg-flame-600 text-white py-3 rounded-md font-semibold transition">
+              Envoyer le message
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-900 text-slate-400 text-sm">
+    <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+      <a href="#accueil" class="shrink-0" aria-label="GUIBERO Consulting – retour en haut de page">
+        <img src="assets/logo-guibero-nav.png" alt="GUIBERO Consulting" width="214" height="40" class="h-10 w-auto" />
+      </a>
+      <p class="md:flex-1 md:px-6"><span class="text-white font-semibold">GUIBERO Consulting</span> · Sécurité incendie, sécurité électrique, sécurité sûreté · Audit / notice de sécurité et mise en sécurité, conseil, formation, installation et mise en conformité</p>
+      <p>© <span id="year"></span> GUIBERO Consulting. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

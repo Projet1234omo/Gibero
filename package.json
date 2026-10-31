@@ -1,0 +1,13 @@
+{
+  "name": "guibero-site",
+  "version": "1.0.0",
+  "description": "Site vitrine statique de GUIBERO Consulting (HTML, Tailwind CSS, JavaScript)",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i input.css -o style.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i input.css -o style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}
